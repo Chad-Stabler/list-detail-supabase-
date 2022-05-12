@@ -7,3 +7,8 @@ export async function getBosses() {
     const response = await client.from('bosses').select('*');
     return response.data;
 }
+
+export async function getBoss(id) {
+    const response = await client.from('bosses').select('*').match({ id : id }).single();
+    return response.data;
+}
