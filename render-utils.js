@@ -24,8 +24,10 @@ export function renderDetailPage(boss) {
     const image = document.createElement('img');
     const details = document.createElement('h2');
 
+    div.classList.add('bossUp');
+
     image.src = `.${boss.image_path}`;
-    details.textContent = `This boss is ${boss.name}, you can find them while exploring around ${boss.game_of_origin}. It's a very difficult difficult boss to fight, my personal favorite attack to see when fighting it is ${boss.favorite_attack}`;
+    details.textContent = `This boss is ${boss.name}, you can find them while exploring around ${boss.game_of_origin}. It's a very difficult difficult boss fight, my personal favorite attack to see when fighting them is ${boss.favorite_attack}`;
 
     div.append(image, details);
 
